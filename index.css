@@ -1,0 +1,728 @@
+/* Remove padding and margin */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+/* NAVIGATION STYLES START */
+
+/* Main nav styles*/
+
+#top-header {
+  background-color: #3fbabc;
+  text-align: center;
+  padding: 5px 0;
+}
+
+#top-header a {
+  color: white;
+  font-size: 0.8rem;
+}
+
+#top-header .fa-brands {
+  margin-left: 15px;
+}
+
+#top-header .fa-envelope {
+  margin-right: 5px;
+}
+
+.top-right-links a {
+  margin-left: 15px;
+}
+
+#nav-con .container {
+  max-width: 1080px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#nav-con .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#nav-con {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: white;
+  border-bottom: 2px solid #f3f3f3;
+  box-shadow: 0px 2px 8px 0px #bdbcbc;
+  -webkit-box-shadow: 0px 2px 8px 0px #bdbcbc;
+  width: 100%;
+}
+
+/* header */
+.header {
+  background-color: #fff;
+  box-shadow: 0px 2px 8px 0px #bdbcbc;
+  -webkit-box-shadow: 0px 2px 8px 0px #bdbcbc;
+  position: absolute;
+  width: 100%;
+  padding: 11px 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  /* width: 140px; */
+  /* max-width: 200px; */
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: 3px solid transparent;
+}
+
+.dropdown li a {
+  font-size: 0.9rem;
+}
+
+.menu li a,
+.shop-btn,
+.mobile-bottom-links a {
+  text-transform: capitalize;
+}
+
+/* When input is checked, show dropdown nav */
+.header .menu-btn:checked ~ .menu {
+  max-height: 100vh;
+}
+
+/* DROPDOWN MENU */
+.header .menu {
+  clear: both;
+  position: absolute;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  top: 98px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+/* Classes toggled for nav in JS */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.dropdown-header h4 {
+  padding: 0 !important;
+}
+
+/* .border-bottom {
+    border-bottom: solid 2px #f3f3f3;
+  } */
+/* END */
+
+.menu .dropdown li {
+  padding: 0;
+  border: none;
+}
+
+.dropdown-button {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+/* Hiding input boxes */
+.menu-btn,
+.menu input {
+  display: none;
+}
+
+.header .drop-icon {
+  position: relative;
+  user-select: none;
+  text-align: center;
+  position: relative;
+}
+
+.header label:after {
+  content: unset;
+}
+
+.header .fa {
+  color: #3f95bf;
+}
+
+.header .dropdown {
+  height: 0;
+  width: 100%;
+  transition: height 0.4s ease;
+  padding: 0 5%;
+}
+
+.dropdown div {
+  padding: 10px 0;
+}
+
+.dropdown-div img {
+  width: 75px;
+}
+
+/* Triggers dropdown acroos full width - for mobile primarily*/
+.dropdown-div label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-con .mobile-only-link {
+  display: none;
+}
+
+.mobile-bottom-links {
+  display: none;
+}
+
+header .fas {
+  font-size: 2rem;
+  color: #3f95bf;
+}
+
+.menu li a {
+  color: #666;
+}
+
+.dropdown-div a,
+.dropdown div {
+  text-align: left;
+}
+
+/* HAMBURGER icon */
+.header .menu-icon {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  right: 5%;
+  padding: 15px 0;
+}
+
+/* Middle hamburger line */
+.header .menu-icon .navicon {
+  background: #3f95bf;
+  display: block;
+  height: 4px;
+  position: relative;
+  transition: background 0.2s ease;
+  width: 30px;
+}
+
+/* Top and bottom hamburger lines which rotate on click */
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #3f95bf;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+/* Bottom hamburger line */
+.header .menu-icon .navicon:before {
+  top: 13px;
+}
+
+/* Top hamburger line */
+.header .menu-icon .navicon:after {
+  top: -13px;
+}
+
+/* Make middle line dissapear on click */
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+/* Rotate line */
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+/* Rotate line */
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* START of cart icon and total amount styling */
+.cart-jay {
+  position: absolute;
+  right: 20%;
+  top: 35px;
+}
+
+.cart-jay .circle {
+  position: absolute;
+  top: -18px;
+  right: -17px;
+  width: 30px;
+}
+
+.amount-of-items {
+  font-size: 12.5px;
+  /* Added due to checkout messing styling */
+  line-height: unset !important;
+}
+
+.circle {
+  /* (A) PERCENTAGE WIDTH & BORDER RADIUS */
+  /* width: 20%; */
+  border-radius: 50%;
+  margin-left: 10px;
+
+  /* (B) BACKGROUND COLOR */
+  background: #3f95bf;
+
+  /* (C) NECESSARY TO POSITION TEXT BLOCK */
+  line-height: 0;
+  position: relative;
+}
+
+/* (D) MATCH HEIGHT */
+.circle::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+/* (E) TEXT BLOCK */
+.circle-txt {
+  /* (E1) CENTER TEXT IN CIRCLE */
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+}
+
+.active {
+  border-left: solid 5px #3f95bf !important;
+  border-bottom: solid 2px #f3f3f3 !important;
+  border-top: solid 2px #f3f3f3 !important;
+}
+
+@media (max-width: 1250px) {
+  .cart-jay .circle {
+    top: -15px;
+    right: -12px;
+    width: 25px;
+  }
+
+  .amount-of-items {
+    font-size: 12.5px;
+  }
+}
+
+/* END of cart icon and total amount styling */
+
+/* DESKTOP STYLES */
+@media screen and (min-width: 1251px) {
+  .header {
+    padding: 0;
+    height: 95px;
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background: unset;
+    box-shadow: none;
+  }
+  .header .menu {
+    position: relative;
+    top: unset;
+    display: flex;
+    max-height: 100%;
+    height: 100%;
+    width: 70%;
+    padding: 0;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .menu .dropdown-button {
+    padding: 0 7.5px 36px;
+    position: relative;
+    top: 17px;
+  }
+
+  .header .logo {
+    position: unset;
+    display: flex;
+  }
+
+  .header .menu-icon {
+    position: unset;
+    display: none;
+  }
+
+  .logo-div {
+    width: 17.5%;
+    margin-right: 10px;
+  }
+
+  .logo-div img {
+    width: 275px;
+    height: 85px;
+    max-height: 100%;
+    cursor: pointer;
+  }
+
+  .dropdown-button {
+    display: block !important;
+  }
+
+  .dropdown-button i {
+    margin-left: 5px;
+  }
+
+  .menu li {
+    padding: 0;
+    border: none;
+  }
+
+  .header .dropdown {
+    display: flex;
+    height: 0;
+    width: 100%;
+    transition: height 0.3s ease;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 128px;
+    justify-content: space-between;
+  }
+
+  #tests .flex-container {
+    justify-content: space-evenly;
+  }
+
+  #tests img {
+    width: 150px;
+  }
+
+  .dropdown div {
+    padding: 15px 0;
+  }
+
+  /* SHOW DROPDOWN DIV ON HOVER */
+  .menu .dropdown-div:hover .dropdown {
+    height: 230px;
+    box-shadow: 0px 8px 10px 0px #ddd, 0px 0px 10px -13px rgb(0 0 0 / 0%);
+    -webkit-box-shadow: 0px 8px 10px 0px #ddd, 0px 0px 10px -13px rgb(0 0 0 / 0%);
+  }
+
+  .menu #how-it-works:hover .dropdown {
+    height: 110px !important;
+  }
+
+  .menu #advice-dropdown:hover .dropdown {
+    height: 400px !important;
+  }
+
+  #flag-dropdown .dropdown div,
+  #flag-dropdown .dropdown-header {
+    text-align: center;
+  }
+
+  .dropdown-button {
+    border-bottom: 3px solid transparent;
+    transition: 0.1s ease;
+  }
+
+  /* When hovering over the dropdown div (whole nav item) show bottom vorder to that dropdown button link  */
+  .menu .dropdown-div:hover .dropdown-button {
+    border-bottom: solid 3px #3f95bf;
+  }
+
+  .menu .dropdown-div:hover .dropdown-button label {
+    color: #3f95bf;
+  }
+
+  .menu li a {
+    padding: 37px 7.5px;
+    font-size: 0.9rem;
+  }
+
+  .menu li {
+    margin: 0 10px;
+  }
+
+  .dropdown li a {
+    font-size: 0.9rem;
+    padding: 7.5px 0;
+  }
+
+  .menu .dropdown a:hover,
+  .blog-link:hover {
+    text-decoration: underline;
+    color: #3f95bf;
+  }
+
+  .dropdown-header:hover > h4 {
+    color: #3f95bf;
+  }
+
+  /* Preventing hover effects for headers without links */
+  #tests .dropdown-header,
+  #tests .dropdown-header:hover > h4 {
+    text-decoration: none;
+    color: #666;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  #trustbadge-container-98e3dadd90eb493088abdc5597a70810 {
+    z-index: 10 !important;
+  }
+
+  /* Hiding for now, needs sorting for mobile */
+  #flag-dropdown {
+    display: none !important;
+  }
+
+  .logo-div {
+    padding-left: 5%;
+  }
+
+  .header .logo {
+    display: flex;
+  }
+
+  .logo img {
+    width: 275px;
+    height: 85px;
+  }
+
+  /*
+    .header .menu {
+      border-top: solid 2px #f1f1f1;
+    } */
+
+  .header {
+    border-bottom: solid 2px #f3f3f3;
+  }
+
+  .dropdown a {
+    padding: 7.5px 0 !important;
+  }
+
+  .dropdown-div img {
+    width: 125px;
+  }
+
+  /* When input is checked, set height of dropdown menu - height allows transtion */
+  .header .drop-btn:checked ~ .dropdown {
+    height: 560px;
+    border-bottom: solid 2px #f3f3f3 !important;
+  }
+
+  .header .drop-btn2:checked ~ .dropdown {
+    height: 270px;
+    border-bottom: solid 2px #f3f3f3 !important;
+  }
+
+  /* .header .drop-btn3:checked ~ .dropdown {
+    height: 270px;
+    border-bottom: solid 2px #f3f3f3 !important;
+  } */
+
+  /* .header .drop-btn4:checked ~ .dropdown {
+    height: 765px;
+    border-bottom: solid 2px #f3f3f3 !important;
+  } */
+
+  /* Custom transtion due to height, needs different value */
+  /* .header #tests, .header #works-dropdown  {
+      transition: height .5s ease;
+    } */
+
+  /* Space between links for mobile, label targeted for better clicking functionality */
+  .dropdown-div label,
+  .mobile-only-link,
+  .blog-link {
+    padding: 25px 5%;
+  }
+
+  #nav-con .flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  #nav-con .dropdown .container {
+    width: 100%;
+  }
+
+  #nav-con .mobile-only-link {
+    display: block;
+  }
+
+  .mobile-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 2.5% auto;
+    padding: 2.5% 0;
+    border-top: solid 3px #f3f3f3;
+    border-bottom: solid 3px #f3f3f3;
+  }
+
+  .mobile-bottom-links a {
+    color: #666;
+    font-size: 1.1rem;
+    margin: 25px 0;
+    text-decoration: none !important;
+  }
+
+  .login-btn-2 {
+    display: flex;
+    align-items: center;
+  }
+
+  .login-btn-2 i {
+    margin-left: 5px;
+  }
+
+  .login-btn,
+  .j-btn {
+    display: none;
+  }
+
+  .active {
+    border-left: solid 5px #3f95bf !important;
+    border-bottom: solid 2px #f3f3f3 !important;
+    border-top: solid 2px #f3f3f3 !important;
+  }
+}
+
+/* Between these widths */
+
+@media screen and (max-width: 600px) {
+  .top-right-links {
+    display: none;
+  }
+  #top-header .flex-container {
+    align-items: center;
+  }
+  .logo img {
+    width: 215px;
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .logo img {
+    height: 60px;
+    max-width: 170px;
+  }
+
+  .cart-jay {
+    position: absolute;
+    right: 22.5%;
+    top: 30px;
+  }
+
+  .header .menu {
+    top: 84px;
+  }
+}
+
+/* END OF TOP HEADER SCROLL AND TIMER STYLES */
+
+/* Horizontal tabs stlyes */
+
+/* Style the tab */
+.tab {
+  /* float: left; */
+  /* border: 1px solid #ccc; */
+  background-color: #faeff3;
+  width: 30%;
+  padding: 0;
+  /* height: 300px; */
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  /* border: none; */
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  /* background-color: #ddd; */
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  /* background-color: #ccc; */
+}
+
+/* Style the tab content */
+.tabcontent {
+  background-color: #fbf3f5;
+  /* float: left; */
+  padding: 0px 12px !important;
+  /* border: 1px solid #fbf3f5; */
+  width: 70%;
+  border-left: none;
+  height: 310px;
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .tab {
+    width: 90%;
+  }
+}
+.header .drop-btn3:checked ~ .dropdown {
+  height: 1000px;
+  border-bottom: solid 2px #f3f3f3 !important;
+}
+
+.tabcontent .flex-container {
+  justify-content: space-around !important;
+}

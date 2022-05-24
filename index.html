@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- FONT AWESOME CDN -->
+    <script src="https://kit.fontawesome.com/eea3fcba86.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <div id="nav-con">
+      <div id="top-header">
+        <div class="container flex-container">
+          <div>
+            <a href="mailto:info@sensitivitycheck.com"><i class="fa-solid fa-envelope"></i>info@sensitivitycheck.com</a>
+
+            <a href="mailto:info@sensitivitycheck.com"><i class="fa-brands fa-facebook-square"></i></a>
+          </div>
+
+          <div class="top-right-links">
+            <a href="https://www.sensitivitycheck.com/become-a-partner/">Become a partner</a>
+            <a href="https://www.sensitivitycheck.com/contact/">FAQs</a>
+            <a href="https://www.sensitivitycheck.com/my-account/">My Account</a>
+            <a href="https://www.sensitivitycheck.com/my-account/">Log in</a>
+            <a href="https://www.sensitivitycheck.com/cart/">
+              <i style="margin-right: 5px" class="fas fa-shopping-cart"></i
+              ><!-- <?php echo $woocommerce->cart->cart_contents_count ?> -->Items
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <header class="header">
+        <!-- <div class="container"> -->
+        <div class="logo-div">
+          <a class="logo" href="https://www.sensitivitycheck.com"
+            ><img src="https://www.sensitivitycheck.com/wp-content/uploads/2018/06/sensitivity-check-logo-1.png" alt="testyourintolerance-logo"
+          /></a>
+        </div>
+
+        <a href="/cart/" class="cart-a">
+          <div class="cart-jay">
+            <i style="font-size: 2rem" class="fas fa-shopping-cart"></i>
+            <div class="circle">
+              <div class="circle-txt">
+                <p class="amount-of-items">
+                  <!-- <?php echo $woocommerce->cart->cart_contents_count ?> -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <!-- </div> -->
+
+        <!-- Dropdown Menu -->
+        <ul class="menu">
+          <li class="mobile-only-link">
+            <a href="https://www.sensitivitycheck.com/order-now/">Shop now</a>
+          </li>
+
+          <!-- Dropdown div -->
+          <div class="dropdown-div">
+            <li>
+              <a class="dropdown-button">
+                <label class="drop-icon" for="drop-btn">
+                  <p>Buy a test</p>
+                  <i class="fa fa-caret-down"></i>
+                </label>
+              </a>
+            </li>
+            <input class="drop-btn" type="checkbox" id="drop-btn" />
+
+            <ul id="tests" class="dropdown">
+              <div class="flex-container container">
+                <div>
+                  <li>
+                    <a class="dropdown-header">
+                      <h4>Standard tests</h4>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.sensitivitycheck.com/product/standard-sensitivity-intolerance-test/">Standard test</a>
+                  </li>
+                  <li>
+                    <a href="https://www.sensitivitycheck.com/product/couples-sensitivity-intolerance-test/">Couples Test</a>
+                  </li>
+                  <li>
+                    <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Family Test</a>
+                  </li>
+                </div>
+
+                <div>
+                  <li>
+                    <a class="dropdown-header">
+                      <h4>Ultimate tests</h4>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.sensitivitycheck.com/product/individual-ultimate-test/">Ultimate Test</a>
+                  </li>
+                  <li>
+                    <a href="https://www.sensitivitycheck.com/product/ultimate-couples-sensitivity-test/">Ultimate Couples Test</a>
+                  </li>
+                  <li>
+                    <a href="https://www.sensitivitycheck.com/product/ultimate-family-sensitivity-test/">Ultimate Family Test</a>
+                  </li>
+                </div>
+
+                <div>
+                  <a href="https://www.sensitivitycheck.com/order-now/" class="dropdown-header">
+                    <h4 style="margin: 10px 0 25px; font-size: 0.9rem; color: #666">Shop All Tests</h4>
+                  </a>
+                  <img src="https://www.sensitivitycheck.com/wp-content/uploads/2022/05/huge-sale-sc-3.svg" />
+                </div>
+              </div>
+            </ul>
+          </div>
+
+          <!-- Dropdown div -->
+          <div id="how-it-works" class="dropdown-div">
+            <li>
+              <a class="dropdown-button">
+                <label class="drop-icon" for="drop-btn2">
+                  <p>About Sensitivity Check</p>
+                  <i class="fa fa-caret-down"></i>
+                </label>
+              </a>
+            </li>
+
+            <input class="drop-btn2" type="checkbox" id="drop-btn2" />
+
+            <ul class="dropdown">
+              <div class="flex-container container">
+                <div>
+                  <li>
+                    <a href="/about-sensitivity-check-2/" class="dropdown-header">
+                      <h4>About Us</h4>
+                    </a>
+                  </li>
+                </div>
+                <div>
+                  <li>
+                    <a href="https://www.sensitivitycheck.com/what-we-test/" class="dropdown-header">
+                      <h4>What we test</h4>
+                    </a>
+                  </li>
+                </div>
+
+                <div>
+                  <li>
+                    <a href="https://www.sensitivitycheck.com/laboratory-food-sensitivity/" class="dropdown-header">
+                      <h4>Sensitivity Testing Labs</h4>
+                    </a>
+                  </li>
+                </div>
+
+                <div>
+                  <li>
+                    <a href="https://www.sensitivitycheck.com/information-about-sensitivity-testing/" class="dropdown-header">
+                      <h4>Sensitivity Testing Science</h4>
+                    </a>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+
+          <li class="desktop-link">
+            <a class="blog-link" href="https://www.sensitivitycheck.com/blog/">Sensitivity Blogs</a>
+          </li>
+
+          <!-- Dropdown div -->
+          <div id="advice-dropdown" class="dropdown-div">
+            <li>
+              <a class="dropdown-button">
+                <label class="drop-icon" for="drop-btn3">
+                  <p>Advice</p>
+                  <i class="fa fa-caret-down"></i>
+                </label>
+              </a>
+            </li>
+
+            <input class="drop-btn3" type="checkbox" id="drop-btn3" />
+
+            <ul class="dropdown">
+              <div class="flex-container container">
+                <div class="tab">
+                  <button class="tablinks active" onmouseover="openCity(event, 'London')">Intolerance Info</button>
+                  <a href=""><button class="tablinks">Elimination Diet</button></a>
+                     <button class="tablinks" onmouseover="openCity(event, 'Tokyo')">Common Allergy and Intolerance Symptoms</button>
+                  <a href=""><button class="tablinks">Allergies & Intolerances</button></a>
+               
+                </div>
+
+                <div id="London" class="tabcontent" style="display: block">
+                  <div class="flex-container">
+                    <div>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/standard-sensitivity-intolerance-test/">Wheat Intolerance</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/couples-sensitivity-intolerance-test/">Soy Intolerance</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Tomato Intolerance</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Eggs Intolerance</a>
+                      </li>
+                    </div>
+                    <div>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/standard-sensitivity-intolerance-test/">Gluten Intolerance</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/couples-sensitivity-intolerance-test/">Peanut Intolerance</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Sesame Intolerance</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Citrus Intolerance</a>
+                      </li>
+                    </div>
+
+                    <div>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/standard-sensitivity-intolerance-test/">Dairy Intolerance</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/couples-sensitivity-intolerance-test/">Sugar Intolerance</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Meat Intolerance</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Apple Intolerance</a>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="Tokyo" class="tabcontent">
+                  <div class="flex-container">
+                    <div>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/standard-sensitivity-intolerance-test/">Standard test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/couples-sensitivity-intolerance-test/">Couples Test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Family Test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Family Test</a>
+                      </li>
+                    </div>
+                    <div>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/standard-sensitivity-intolerance-test/">Standard test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/couples-sensitivity-intolerance-test/">Couples Test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Family Test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Family Test</a>
+                      </li>
+                    </div>
+
+                    <div>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/standard-sensitivity-intolerance-test/">Standard test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/couples-sensitivity-intolerance-test/">Couples Test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Family Test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Family Test</a>
+                      </li>
+                    </div>
+
+                    <div>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/standard-sensitivity-intolerance-test/">Standard test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/couples-sensitivity-intolerance-test/">Couples Test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Family Test</a>
+                      </li>
+                      <li>
+                        <a href="https://www.sensitivitycheck.com/product/family-sensitivity-intolerance-test/">Family Test</a>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+
+          <li class="mobile-only-link">
+            <a href="https://www.sensitivitycheck.com/become-a-partner/">Become a partner</a>
+          </li>
+
+          <li class="mobile-only-link">
+            <a href="https://www.sensitivitycheck.com/contact/">FAQs</a>
+          </li>
+
+          <!-- hidden on dekstop -->
+          <div class="mobile-bottom-links">
+            <a href="https://www.sensitivitycheck.com/my-account/" class="login-btn-2">Log in<i class="fas fa-user-circle"></i></a>
+            <a href="https://www.sensitivitycheck.com/my-account/">My Account</a>
+          </div>
+
+          <!-- Adding this to allow scrolling for the dropdown nav -->
+          <li class="mobile-only-link" style="padding-bottom: 300px"></li>
+        </ul>
+      </header>
+    </div>
+    <!-- END OF NAV -->
+
+    <script src="index.js" async defer></script>
+  </body>
+</html>
